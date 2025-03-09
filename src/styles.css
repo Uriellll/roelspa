@@ -1,1 +1,479 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;600;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Livvic', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}
+h2{
+    font-size: 3em;
+}
+h3{
+    font-size: 2em;
+}
+p{
+    font-size: 1em;
+}
+
+
+.index{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden ;
+}
+.index .move{
+    position: absolute;
+    bottom: 100px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #fff;
+ 
+    text-shadow: 15px 5px 10px #6D6E71;
+    
+    animation: move-left-right 30s infinite;
+    
+}
+/* @keyframes move-left-right{
+    from{
+        
+        transform: translateX(-130%);
+      
+    }
+    to{
+        transform: translateX(130%);
+        
+    }
+} */
+
+.index .bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f74f5a;
+}
+.index .bg::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .1);
+}
+.index .content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.index .content .textBox{
+    max-width: 600px;
+}
+.index .content .textBox h1{
+    color: #fff;
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1em;
+
+}
+.index .content .textBox h4{
+    font-size: 2em;
+    color: #fff;
+}
+.index .content .textBox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background-color: #fff;
+    color: #6D6E71;
+    border-radius:40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration: none;
+   
+}
+.index .content .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+}
+.index .content .imgBox img{
+    max-width: 100%;
+
+}
+.index .thumb{
+    position: absolute;
+    left: 50%;
+    display: flex;
+    bottom: 20px;
+    transform: translatex(-50%);
+}
+.index .thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: auto 10px;
+    cursor: pointer;
+    transition: .5s;
+    height: 70px;
+    background: rgba(255,255,255,.1);
+    padding: 5px;
+    border: 2px solid rgba(255,255,255,.25);
+}
+.index .thumb li.active{
+    border: 2px solid rgba(255,255,255,1);
+}
+.index .thumb li::before{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -200px;
+    content: attr(data-text);
+    white-space: nowrap;
+    font-size: 8em;
+    color: rgba(0,0,0,0.1);
+    opacity: 0;
+    font-weight: 700;
+    pointer-events: none;
+}
+.index .thumb li.active::before{
+    opacity: 1;
+
+}
+.index .thumb li img{
+    max-width: 50px;
+}
+/*About*/
+.about{
+    padding: 200px 100px;
+    text-align: center;
+}
+.about h2{
+    color: #6D6E71;
+    margin-bottom: 15px;
+}
+.products{
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    padding: 100px;
+    align-items: center;
+    background-image: url('./assets/img/office.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
+}
+.products .products-list{
+    width: 70px;
+    height: 280px;
+    border-radius: 35px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .1);
+    background-color: #fff;
+    position: relative;
+}
+.products .products-list ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.products .products-list ul li{
+    position: relative;
+    list-style: none;
+    width: 70px;
+    height: 70px;
+    z-index: 1;
+
+}
+.products .products-list ul li a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #6D6E71;
+    font-weight: 500;
+}
+.products .products-list ul li a .icon{
+    position: relative;
+    display: block;
+    line-height: 75px;
+    text-align: center;
+    transition: .5s;
+}
+.products .products-list ul li.active a .icon{
+    color: #fff;
+}
+.products .products-list ul li a .icon i{
+    font-size: 24px;
+
+}
+.products .products-list ul li a .title{
+    position: absolute;
+    top: 50%;
+    left: 110px;
+    color: #000;
+    background-color: #fff;
+    transform: translateY(-50%);
+    width: 250px;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    transition: .5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .1) ;
+    opacity: 0;
+    visibility: hidden;
+}
+.products .products-list ul li:hover a .title{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-25px) translateY(-50%);
+
+}
+.products .products-list ul li a .title::before{
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    left: -8px;
+    top: 46%;
+    transform: rotate(45deg) translateY(-50%);
+    border-radius: 2px;
+}
+.products .products-list ul .indicator{
+    position: absolute;
+    left: 0;
+    width: 70px;
+    height: 70px;
+    transition: .5s;
+    
+}
+.products .products-list ul .indicator::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    transition: .5s;
+}
+.products .products-list ul li:nth-child(1).active ~ .indicator{
+    transform: translateY(calc(70px * 0));
+}
+.products .products-list ul li:nth-child(2).active ~ .indicator{
+    transform: translateY(calc(70px * 1));
+}
+.products .products-list ul li:nth-child(3).active ~ .indicator{
+    transform: translateY(calc(70px * 2));
+}
+.products .products-list ul li:nth-child(4).active ~ .indicator{
+    transform: translateY(calc(70px * 3));
+}
+.products .products-list ul li.active:nth-child(1) ~ .indicator::before{
+    background-color: #f74f5a;
+    
+}
+.products .products-list ul li.active:nth-child(2) ~ .indicator::before{
+    background-color: #f74fae;
+    
+}
+.products .products-list ul li.active:nth-child(3) ~ .indicator::before{
+    background-color: #4faef7;
+    
+    
+}
+.products .products-list ul li.active:nth-child(4) ~ .indicator::before{
+    background-color: #f7984f;
+    
+    
+}
+.products h2{
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    padding: 20px;
+    background-color: #f74f5a;
+    text-align: center;
+    color: #fff;
+    
+}
+.products .text{
+    position: absolute;
+    background-color: #f74f5a;
+    padding: 50px;
+    top: 50%;
+    left: 50%;
+    transition: .5s;
+    transform: translateY(-50%);
+    /* transform: translate(-50%,-50%); */
+    
+    
+}
+.products .text h3{
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+.products .text p{
+    color: #fff;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    min-height: 100vh;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(243, 243, 243);
+    padding: 100px;
+    
+    
+}
+.right{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.formContact{
+    width: 550px;
+    background-color: #f74f5a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    
+    
+}
+.left{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.left .image{
+    width: 100%;
+}
+.left .image img{
+    width: 100%;
+}
+.formContact::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    background: linear-gradient(#f74f5a,#f74f5a,#f16b74);
+    filter: blur(1px);
+    z-index:1;
+
+}
+.formContact::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 25px;
+    height: 100%;
+    background: linear-gradient(#f74f5a,#f74f5a,#f53542);
+    filter: blur(1px);
+    z-index:1;
+}
+.formContact .shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #f74f5a;
+}
+/*.formContact .shadow::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(100% + 320px);
+    width: 100%;
+    height: 240%;
+    background: linear-gradient(rgba(7, 0, 0, 0.075), transparent);
+    transform: skewX(45deg);
+    
+}
+
+.formContact .shadow::after{
+    content: '';
+    position: absolute;
+    bottom: -200%;
+    left: calc(100% + 180px);
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(rgba(7, 0, 0, 0.075), transparent);
+    transform: skewX(45deg);
+    
+}  */
+.formContact .content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f1848b, #f74f5a);
+    padding-top: 30px ;
+    padding-bottom: 30px ;
+    padding-left: 30px;
+    padding-right: 40px;
+    text-align: center;
+}
+.formContact .content .inputBox,
+.formContact .content textarea
+{
+    width: 100%;
+    display: inline-block;
+    background-color: #f1848b;
+    outline: none;
+    border: none;
+    padding: 5px;
+    margin: 5px;
+    color: #fff;
+    
+}
+.formContact .content textarea{
+    min-height: 100px;
+    max-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+}
+.formContact .content .category{
+    
+    text-align: left;
+    padding: 5px 40px;
+}
+.formContact .content .check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map{
+    padding: 100px;
+    text-align: center;
+}
+.map h2{
+    margin-bottom: 20px;
+}
+.map iframe{
+    width: 100%;
+}

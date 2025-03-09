@@ -1,0 +1,29 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo img{
+    width: 250px;
+}
+.navigation a{
+    text-decoration: none; 
+    color: #fff;   
+    padding: 8px 15px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.navigation a.active,
+.navigation a:hover{
+    background: #fff;
+    color: #6D6E71;
+
+
+}

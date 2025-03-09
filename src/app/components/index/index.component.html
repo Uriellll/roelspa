@@ -1,0 +1,139 @@
+<section class="main">
+    <section class="index">
+        <div class="bg"></div>
+        <app-header></app-header>
+        <div class="content">
+            <div class="textBox">
+                <h1>Artículos Para Oficina</h1>
+                <h4>Ahorra tiempo, tenemos todo lo que tu empresa necesita</h4>
+                <a href="#">Ver más</a>
+
+            </div>
+            <div class="imgBox">
+                <img src="./assets/img/papeleria.png" class="roelImage"alt="">
+
+            </div>
+        </div>
+        <!-- <h3 class="move">Ahorra tiempo, tenemos todo lo que tu empresa necesita</h3> -->
+        <ul class="thumb" >
+            <li data-text="Papeleria" (click)="imgSlider('./assets/img/papeleria.png'); changeBgColor('#f74f5a')" class="active"><img src="./assets/img/papeleria.png" ></li>
+            <li data-text="Consumibles" (click)="imgSlider('./assets/img/consumibles.png');changeBgColor('#f74fae')"><img src="./assets/img/consumibles.png" ></li>
+            <li data-text="Limpieza" (click)="imgSlider('./assets/img/limpieza.png'); changeBgColor('#f7984f')"><img src="./assets/img/limpieza.png" ></li>
+            <li data-text="Electrodomésticos" (click)="imgSlider('./assets/img/electrodomesticos.png'); changeBgColor('#4faef7')"><img src="./assets/img/electrodomesticos.png" ></li>
+        </ul>
+    </section>
+    <section class="about">
+        
+            <h2>¿Quiénes somos?</h2>
+            <div>
+                <p>Somos una empresa comercializadora de insumos internos para empresas.</p>
+                <p>Tenemos más de 15 años de experiencia, llevando siempre a usted los mejores productos y servicios con la mejor atención.</p>
+                <p>Nos caracterizamos por la atención especializada en cada servicio, ventas a detalle, entregas puntuales, variedad y disponibilidad de productos a precios de mayoreo.</p>
+                <p>CM ROEL es una empresa versátil, buscando ser una de las compañías líderes en el mercado.</p>
+            </div>
+        
+
+    </section>
+    <section class="products">
+        <h2>Productos y servicios</h2>
+        <div class="products-list">
+            <ul>
+                <li (click)="changeBgProducts('./assets/img/office.jpg')" class="list active">
+                    <a href="#products">
+                        <span class="icon"><i class="fa-solid fa-house-laptop"></i></span>
+                        <span class="title">Artículos de Oficina y papeleria</span>
+                    </a>
+                </li>
+                <li class="list" (click)="changeBgProducts('./assets/img/consumibles.jpg')">
+                    <a href="#products" >
+                        <span class="icon"><i class="fa-solid fa-print"></i></span>
+                        <span class="title">Consumibles originales y genéricos</span>
+                    </a>
+                </li>
+                <li class="list" (click)="changeBgProducts('./assets/img/limpieza.jpg')">
+                    <a href="#products">
+                        <span class="icon" ><i class="fa-solid fa-pump-soap"></i></span>
+                        <span class="title">Artículos de limpieza</span>
+                    </a>
+                </li>
+                <li class="list" (click)="changeBgProducts('./assets/img/cafe.jpg')">
+                    <a href="#products">
+                        <span class="icon"><i class="fa-solid fa-mug-saucer"></i></span>
+                        <span class="title">Cafetería</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+
+        </div>
+        <div class="text">
+            <h3>Artículos de Oficina y papeleria</h3>
+            
+                <p><li>Papel</li><li>Artículos de papelería</li><li>Accesorios de escritorio</li><li>Almacenamiento</li><li>Tecnología</li><li>Arte y dibujo</li><li>Muebles de oficina</li></p>
+                
+            
+        </div>
+
+    </section>
+    <section class="contact">
+        <div class="left">
+            <h2>Contáctanos</h2>
+            <div class="image">
+                <img src="./assets/img/contact.png" alt="">
+            </div>
+            
+        </div>
+        <div class="right">
+        <div class="formContact">
+            <div class="shadow"></div>
+            <div class="content">
+                <div class="form">
+                    <h3>Solicita una Cotización</h3>
+                    <p>Para obtener 5% de descuento en tu primer compra</p>
+                        <input class="inputBox" type="text" name="" id="" placeholder="Nombre(s):">
+                        <input class="inputBox" type="text" name="" id="" placeholder="Apellidos:">
+                        <input class="inputBox" type="text" name="" id="" placeholder="Empresa:">
+                        <input class="inputBox" type="email" name="" id="" placeholder="Correo:">
+                        <input class="inputBox" type="number" name="" id="" placeholder="Teléfono:">
+                    <div class="category">
+                        <h4>Selecciona las categorías de Interés</h4>
+                        <label><input type="checkbox" value="Articulos de oficina y papeleria" name="option[]"> Artículos de oficina y papelería</label>
+                        <br>
+                        <label><input type="checkbox" value="Consumibles originales y genericos" name="option[]"> Consumibles originales y genéricos</label>
+                        <br>
+                        <label><input type="checkbox" value="Cafeteria" name="option[]"> Cafetería</label>
+                        <br>
+                        <label><input type="checkbox" value="Promocionales" name="option[]"> Promocionales</label>
+                        <br>
+                        <label><input type="checkbox" value="Equipos de seguridad industrial" name="option[]"> Equipos de seguridad industrial</label>
+                        <br>
+                        <label><input type="checkbox" value="Electrodomesticos" name="option[]"> Electrodomésticos</label>
+                        <br>
+                        <label><input type="checkbox" value="Material de Empaque" name="option[]"> Material de Empaque</label>
+                        <br>
+                        <label><input type="checkbox" value="Equipos de fotocopiado e impresion" name="option[]"> Equipos de fotocopiado e impresión</label>
+                        <br>
+                        <label><input type="checkbox" value="Renta y reparacion de fotocopiadoras" name="option[]"> Renta y reparación de fotocopiadoras</label>
+                        <br>
+                        <label><input type="checkbox" value="Control de Plagas" name="option[]"> Control de Plagas</label>
+                    </div>
+                    <textarea name="mensaje" placeholder="Mensaje:"></textarea>
+                    <div class="check">
+                        <input type="checkbox" class="check" name="aviso" value="true" required="">
+                        <p class="notice">Acepto los términos y condiciones del <a href="aviso/aviso.html" target="_blank" class="avisoPrivacidad">aviso de privacidad</a></p>
+                    </div>
+                        <button type="submit">Enviar</button>
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="map">
+        <h2>Mapa</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.6410356183674!2d-99.07046578468399!3d19.384689747233065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fef20b5f2edd%3A0x948814e8b55057ef!2sCM%20Roel!5e0!3m2!1ses-419!2smx!4v1673975717339!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </section>
+    
+</section>
